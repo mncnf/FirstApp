@@ -1,13 +1,17 @@
-var occupations = [
-    "ヒロシ": "経営者",
-    "たつひろ": "詩人",
-    "由伸": "数学者￥",
-]
-print(occupations["ヒロシ"]!)
+var names = ["太郎", "二郎", "三郎"]
 
-occupations["信貞"] = "哲学者"
-print(occupations)
+for name in names {
+    print(name)
+}
 
-var emptyDictionary = [String: Int]()
-print(emptyDictionary)
-print(type(of: emptyDictionary))
+for i in 1...10 {
+    print(i)
+}
+
+for i in 1...10 {
+    print(i)
+}
+
+for i in 1..<10 {
+    print(i)
+}

@@ -111,32 +111,51 @@
 //getData()
 
 //section3-30
-class Monster {
-    var kind = "monster"
-    
-    func bodyBrow() {
-        print("bodyBrow")
-    }
-}
+//class Monster {
+//    var kind = "monster"
+//    
+//    func bodyBrow() {
+//        print("bodyBrow")
+//    }
+//}
+//
+//class Dragon: Monster {
+//    func fireBreath() {
+//        print("fireBreath")
+//    }
+//}
+//
+//class Slime: Monster {
+//    func recovery() {
+//        print("recovery")
+//    }
+//}
+//
+//var dragon = Dragon()
+//print(dragon.kind)
+//dragon.bodyBrow()
+//dragon.fireBreath()
+//
+//var slime = Slime()
+//print(slime.kind)
+//slime.bodyBrow()
+//slime.recovery()
 
-class Dragon: Monster {
-    func fireBreath() {
-        print("fireBreath")
-    }
-}
+// section3-31
+var any: Any = 1024
+var str: String = "String"
+var int: Int = 128
 
-class Slime: Monster {
-    func recovery() {
-        print("recovery")
-    }
-}
+// upcast
+//var anyStr = str as Any
+//anyStr = any
+//print(anyStr)
 
-var dragon = Dragon()
-print(dragon.kind)
-dragon.bodyBrow()
-dragon.fireBreath()
+// downcast
+// as!
+//print(any as! Int)
+//print(any as! String)
 
-var slime = Slime()
-print(slime.kind)
-slime.bodyBrow()
-slime.recovery()
+// as?
+print(any as? Int)
+print(any as? String)

@@ -11,7 +11,11 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             Text("Hello")
-                .navigationTitle(Text("タイトル"))
+                .toolbar {
+                    ToolbarItem {
+                        Text("アイテム")
+                    }
+                }
         }
     }
 }

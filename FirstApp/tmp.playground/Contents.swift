@@ -1,17 +1,11 @@
-func Hello(name: String) -> String {
-    return "こんにちは、\(name)さん"
-}
+//let Hello = { (name: String) -> String in
+//        return "こんにちは\(name)さん"
+//}
 
-print(Hello(name: "タロウ"))
+//let Hello = { () -> String in
+//        return "こんにちは田中さん"
+//}
 
-func Hello(name1: String, name2: String, name3: String) -> String {
-    return "こんにちは、\(name1)さん、\(name2)さん、\(name3)さん！"
-}
+let Hello = { () -> () in print("こんにちは田中さん")}
 
-print(Hello(name1: "タロウ", name2: "二郎", name3: "誰やねん"))
-
-func HelloWorld() {
-    print("Hello, World！")
-}
-
-HelloWorld()
+Hello()

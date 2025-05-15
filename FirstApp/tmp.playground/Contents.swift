@@ -1,11 +1,9 @@
-func Drink() {
-    var age = 13
-    
-    guard age >= 20 else {
-        print("酒が飲めない")
-        return
-    }
-    print("酒を飲む")
-}
+var sports = ["サッカー", "テニス", "バスケ"]
 
-Drink()
+print(sports[1])
+
+sports.append("卓球")
+print(sports)
+
+var emptyArray = [String]()
+print(emptyArray)

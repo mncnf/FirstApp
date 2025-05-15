@@ -1,4 +1,11 @@
-var apple = 10
+var number = 290
 
-print("私は\(apple)個りんごを持っています")
-
+if number == 10 {
+    print(10)
+}
+else if number == 30 {
+    print(30)
+}
+else {
+    print("それ以外")
+}

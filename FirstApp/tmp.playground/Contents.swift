@@ -1,25 +1,11 @@
-//var optionalInt :Int? = 30
-//print(optionalInt)
-
-//var optionalInt :Int? = 30
-//print(optionalInt!)
-
-//var optionalInt :Int? = 30
-//var optionalInt :Int? = nil
-//if let unwrapedInt = optionalInt {
-//    print(unwrapedInt)
-//} else {
-//    print("unwrapedIntはnil")
-//}
-
-
-func Unwrap() {
-    var optionalInt :Int? = 20
-    guard let unwrapedInt = optionalInt else {
-        print("unwrapedIntはnil")
+func Drink() {
+    var age = 13
+    
+    guard age >= 20 else {
+        print("酒が飲めない")
         return
     }
-    print(unwrapedInt)
+    print("酒を飲む")
 }
 
-Unwrap()
+Drink()

@@ -1,3 +1,5 @@
-var explicitInteger: Int
+var label = "横幅： "
+var width = 80
 
-var explicitString: String = "ブドウ"
+print(label + String(width))
+

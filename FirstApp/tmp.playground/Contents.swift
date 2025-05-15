@@ -86,26 +86,57 @@
 //}
 
 //section3-28
-import UIKit
+//import UIKit
+//
+//func connectServer() throws {
+//    var canConnectServer = false
+//
+//    if canConnectServer {
+//        print("サーバーと接続")
+//    }
+//    else {
+//        throw NSError()
+//    }
+//}
+//
+//func getData() {
+//    do {
+//        try connectServer()
+//        print("データを取り出す")
+//    } catch {
+//        print("エラーの時の処理")
+//    }
+//}
+//
+//getData()
 
-func connectServer() throws {
-    var canConnectServer = false
-
-    if canConnectServer {
-        print("サーバーと接続")
-    }
-    else {
-        throw NSError()
+//section3-30
+class Monster {
+    var kind = "monster"
+    
+    func bodyBrow() {
+        print("bodyBrow")
     }
 }
 
-func getData() {
-    do {
-        try connectServer()
-        print("データを取り出す")
-    } catch {
-        print("エラーの時の処理")
+class Dragon: Monster {
+    func fireBreath() {
+        print("fireBreath")
     }
 }
 
-getData()
+class Slime: Monster {
+    func recovery() {
+        print("recovery")
+    }
+}
+
+var dragon = Dragon()
+print(dragon.kind)
+dragon.bodyBrow()
+dragon.fireBreath()
+
+var slime = Slime()
+print(slime.kind)
+slime.bodyBrow()
+slime.recovery()

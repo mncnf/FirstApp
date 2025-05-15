@@ -46,28 +46,41 @@
 //
 //var dog = Animal()
 //dog.Bite()
+//
+//struct Animal {
+//    let age: Int
+//    var kind: String
+//    
+//    func Bite() {
+//        print("\(age)歳の\(kind)が噛み付く")
+//    }
+//    
+//    init(age: Int, kind: String) {
+//        self.age = age
+//        self.kind = kind
+//    }
+//}
+//
+//var panda = Animal(age: 10, kind: "パンダ")
+//panda.Bite()
+//
+//var animals: [Animal] = [
+//    Animal(age: 10, kind: "虎"),
+//    Animal(age: 2, kind: "二限"),
+//    Animal(age: 1, kind: "へび"),
+//]
+//
+//animals[1].Bite()
 
-struct Animal {
-    let age: Int
-    var kind: String
-    
-    func Bite() {
-        print("\(age)歳の\(kind)が噛み付く")
-    }
-    
-    init(age: Int, kind: String) {
-        self.age = age
-        self.kind = kind
-    }
+// section3-27
+protocol Animal{
+    var age: Int { get }
+    func bark()
 }
 
-var panda = Animal(age: 10, kind: "パンダ")
-panda.Bite()
-
-var animals: [Animal] = [
-    Animal(age: 10, kind: "虎"),
-    Animal(age: 2, kind: "二限"),
-    Animal(age: 1, kind: "へび"),
-]
-
-animals[1].Bite()
+struct Dog: Animal {
+    let age: Int
+    func bark() {
+        print("犬が吠える")
+    }
+}

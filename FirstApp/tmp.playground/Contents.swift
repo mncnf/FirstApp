@@ -73,14 +73,39 @@
 //animals[1].Bite()
 
 // section3-27
-protocol Animal{
-    var age: Int { get }
-    func bark()
-}
+//protocol Animal{
+//    var age: Int { get }
+//    func bark()
+//}
+//
+//struct Dog: Animal {
+//    let age: Int
+//    func bark() {
+//        print("犬が吠える")
+//    }
+//}
 
-struct Dog: Animal {
-    let age: Int
-    func bark() {
-        print("犬が吠える")
+//section3-28
+import UIKit
+
+func connectServer() throws {
+    var canConnectServer = false
+
+    if canConnectServer {
+        print("サーバーと接続")
+    }
+    else {
+        throw NSError()
     }
 }
+
+func getData() {
+    do {
+        try connectServer()
+        print("データを取り出す")
+    } catch {
+        print("エラーの時の処理")
+    }
+}
+
+getData()

@@ -1,5 +1,4 @@
-var label = "横幅： "
-var width = 80
+var apple = 10
 
-print(label + String(width))
+print("私は\(apple)個りんごを持っています")
 

@@ -142,9 +142,9 @@
 //slime.recovery()
 
 // section3-31
-var any: Any = 1024
-var str: String = "String"
-var int: Int = 128
+//var any: Any = 1024
+//var str: String = "String"
+//var int: Int = 128
 
 // upcast
 //var anyStr = str as Any
@@ -157,5 +157,26 @@ var int: Int = 128
 //print(any as! String)
 
 // as?
-print(any as? Int)
-print(any as? String)
+//print(any as? Int)
+//print(any as? String)
+
+// section3-32
+enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
+}
+
+var directionToHead = CompassPoint.west
+
+switch directionToHead {
+case .north:
+    print("go north")
+case .south:
+    print("go south")
+case .east:
+    print("go east")
+case .west:
+    print("go west")
+}

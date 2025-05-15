@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationStack {
             Text("Hello")
                 .toolbar {
-                    ToolbarItem {
+                    ToolbarItem(placement: .topBarTrailing) {
                         Text("アイテム")
                     }
                 }

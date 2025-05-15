@@ -1,17 +1,17 @@
-var names = ["太郎", "二郎", "三郎"]
-
-for name in names {
-    print(name)
+func Hello(name: String) -> String {
+    return "こんにちは、\(name)さん"
 }
 
-for i in 1...10 {
-    print(i)
+print(Hello(name: "タロウ"))
+
+func Hello(name1: String, name2: String, name3: String) -> String {
+    return "こんにちは、\(name1)さん、\(name2)さん、\(name3)さん！"
 }
 
-for i in 1...10 {
-    print(i)
+print(Hello(name1: "タロウ", name2: "二郎", name3: "誰やねん"))
+
+func HelloWorld() {
+    print("Hello, World！")
 }
 
-for i in 1..<10 {
-    print(i)
-}
+HelloWorld()

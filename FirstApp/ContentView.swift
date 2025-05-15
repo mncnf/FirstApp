@@ -9,17 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            List {
-                Text("リンゴ")
-                    .padding()
-                Text("レモン")
-                    .padding()
-                Text("オレンジ")
-                    .padding()
-            }
+        NavigationStack {
+            Text("Hello")
+                .navigationTitle(Text("タイトル"))
         }
-        .padding()
     }
 }
 

@@ -8,38 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        List {
-            ForEach(0 ..< 11) { num in
-                Text("\(num): Hello,World!")
-            }
-        }
-    }
-}
-
-struct Human: Identifiable {
-    let id = UUID()
-    let name: String
-}
-
-struct ArrayContentView: View {
-    let humans = [
-        Human(name: "tanaka"),
-        Human(name: "suzuki"),
-        Human(name: "satou")
-    ]
+    @State var lastName = "tanaka"
+    let firstName = "tarou"
 
     var body: some View {
-        List {
-            ForEach(humans) { human in
-                Text("\(human.name)さん、こんにちは")
-                Text("\(human.id.description)")
+        VStack {
+            Button(action: { self.lastName = "simada" }) {
+                Text("change name")
             }
+            Text(lastName + firstName)
         }
     }
 }
 
 #Preview {
-//    ContentView()
-    ArrayContentView()
+    ContentView()
 }

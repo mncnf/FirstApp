@@ -8,21 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var showingFullScreenCover = false
+    @State var flag = true
 
     var body: some View {
-        Button(action: { showingFullScreenCover = true }) {
-            Text("fullScreenCoverViewを出す")
-        }
-        .fullScreenCover(isPresented: $showingFullScreenCover, content: {
-            fullScreenCoverView()
-        })
-    }
-}
-
-struct fullScreenCoverView: View {
-    var body: some View {
-        Text("fullScreenCoverView")
+        Toggle(flag.description, isOn: $flag)
     }
 }
 

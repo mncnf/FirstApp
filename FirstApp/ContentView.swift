@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isMan = true
-
     var body: some View {
-        Text("HelloWorld")
-            .onTapGesture {
-                print("タップされた")
-            }
+        ZStack {
+            Rectangle()
+                .fill(.red)
+                .frame(width: 200, height: 100)
+            Text("Hello, World!")
+        }
     }
 }
 

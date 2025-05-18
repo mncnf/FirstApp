@@ -11,24 +11,10 @@ struct ContentView: View {
     @State var isMan = true
 
     var body: some View {
-        Toggle("Toggle", isOn: $isMan)
-            .toggleStyle(GenderToggleStyle())
-    }
-}
-
-struct GenderToggleStyle: ToggleStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        HStack {
-            Button("男性") {
-                configuration.isOn.toggle()
+        Text("HelloWorld")
+            .onTapGesture {
+                print("タップされた")
             }
-            .disabled(configuration.isOn)
-
-            Button("女性") {
-                configuration.isOn.toggle()
-            }
-            .disabled(!configuration.isOn)
-        }
     }
 }
 

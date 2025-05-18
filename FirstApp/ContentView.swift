@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isShowing = false
+    @State var showingFullScreenCover = false
 
     var body: some View {
-        Button(action: { isShowing = true }) {
-            Text("AnotherViewを出す")
+        Button(action: { showingFullScreenCover = true }) {
+            Text("fullScreenCoverViewを出す")
         }
-        .sheet(isPresented: $isShowing, content: {
-            AnotherView(isShowing: $isShowing)
+        .fullScreenCover(isPresented: $showingFullScreenCover, content: {
+            fullScreenCoverView()
         })
     }
 }
 
-struct AnotherView: View {
-    @Binding var isShowing: Bool
-
+struct fullScreenCoverView: View {
     var body: some View {
-        Text(isShowing.description)
+        Text("fullScreenCoverView")
     }
 }
 

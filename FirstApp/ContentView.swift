@@ -8,15 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var lastName = "tanaka"
-    let firstName = "tarou"
+    @ObservedObject var userData = UserData(name: "suzuki", age: 20)
 
     var body: some View {
         VStack {
-            Button(action: { self.lastName = "simada" }) {
+            Button(action: { userData.name = "tanaka" }) {
                 Text("change name")
             }
-            Text(lastName + firstName)
+            Button(action: { userData.age += 1 }) {
+                Text("add age")
+            }
+            
+            // notPublish test
+            Button(action: { userData.firstName = "tarou" }) {
+                Text("change first name")
+            }
+
+            Text("\(userData.name)\(userData.firstName)\(userData.age)")
         }
     }
 }

@@ -8,26 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var userData: UserData
+    @State var favoriteAnimal = ""
 
     var body: some View {
         VStack {
-            Button(action: { userData.age += 1 }) {
-                Text("add age")
-            }
-            Text("ContentView: \(userData.name)の年齢は\(userData.age)")
-                .padding()
+            TextField("好きな動物を入力してください", text: $favoriteAnimal)
 
-            AnotherContentView()
+            Text("好きな動物は\(favoriteAnimal)")
         }
-    }
-}
-
-struct AnotherContentView: View {
-    @EnvironmentObject var userData: UserData
-
-    var body: some View {
-        Text("AnotherContentView: \(userData.name)の年齢は\(userData.age)")
+        .padding()
     }
 }
 

@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var flag = true
+    @State var isDisabled = false
 
     var body: some View {
-        Toggle(flag.description, isOn: $flag)
+        Button("ボタン") {
+            isDisabled = true
+        }
+        .disabled(isDisabled)
     }
 }
 

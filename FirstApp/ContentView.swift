@@ -13,6 +13,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TextField("好きな動物を入力してください", text: $favoriteAnimal)
+                .onSubmit {
+                    favoriteAnimal = ""
+                }
 
             Text("好きな動物は\(favoriteAnimal)")
         }

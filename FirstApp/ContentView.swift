@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var showingSheet = false
+    @State var isShowing = false
 
     var body: some View {
-        Button(action: { showingSheet = true }) {
-            Text("Sheetを表示")
+        Button(action: { isShowing = true }) {
+            Text("AnotherViewを出す")
         }
-        .sheet(isPresented: $showingSheet, content: {
-            SheetView()
+        .sheet(isPresented: $isShowing, content: {
+            AnotherView(isShowing: $isShowing)
         })
     }
 }
 
-struct SheetView: View {
+struct AnotherView: View {
+    @Binding var isShowing: Bool
+
     var body: some View {
-        Text("SheetView")
+        Text(isShowing.description)
     }
 }
 

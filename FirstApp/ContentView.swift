@@ -11,15 +11,9 @@ struct ContentView: View {
     @State var favoriteAnimal = ""
 
     var body: some View {
-        VStack {
-            TextField("好きな動物を入力してください", text: $favoriteAnimal)
-                .onSubmit {
-                    favoriteAnimal = ""
-                }
-
-            Text("好きな動物は\(favoriteAnimal)")
-        }
-        .padding()
+        Image("profile")
+            .resizable()
+            .frame(width: 200, height: 200, alignment: .center)
     }
 }
 

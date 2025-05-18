@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var favoriteAnimal = ""
+    @State var showingSheet = false
 
     var body: some View {
-        Image("profile")
-            .resizable()
-            .frame(width: 200, height: 200, alignment: .center)
+        Button(action: { showingSheet = true }) {
+            Text("Sheetを表示")
+        }
+        .sheet(isPresented: $showingSheet, content: {
+            SheetView()
+        })
+    }
+}
+
+struct SheetView: View {
+    var body: some View {
+        Text("SheetView")
     }
 }
 
